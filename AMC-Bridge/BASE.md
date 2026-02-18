@@ -76,8 +76,6 @@ DevOps helps organizations:
 
 </details>
 
----
-
 ## <span style="color:#8E44AD;">🎯 Q2. What agile or time-tracking tools do you know?</span>
 
 <details>
@@ -162,8 +160,6 @@ My approach:
 > I’ve worked with Jira, Azure DevOps, Trello, Harvest, and Clockify. However, I believe tools are enablers — the real value lies in how effectively they improve transparency, delivery speed, and continuous improvement.
 
 </details>
-
----
 
 ## <span style="color:#1F618D;">🎯 Q3. How do you describe an application development life cycle, and how can DevOps be integrated here?</span>
 
