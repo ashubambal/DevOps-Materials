@@ -87,8 +87,6 @@ DevOps helps organizations:
 
 ---
 
-<br>
-
 ## <span style="color:#8E44AD;">🎯 Q2. What agile or time-tracking tools do you know?</span>
 
 <details>
