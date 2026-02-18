@@ -466,4 +466,194 @@ Example:
 
 </details>
 
+### <span style="color:#0B5345;">🎯 Q5. What does the TCP/IP stack mean? What is the main mechanism for creating an IP address? What is the difference between TCP and UDP?</span>
+
+<details>
+<summary><b>Click to Expand Answer</b></summary>
+
+---
+
+# <span style="color:#27AE60;">✅ Senior-Level Answer</span>
+
+> The TCP/IP stack is the foundational communication model of the Internet.  
+> It defines how data is transmitted across networks using a four-layer architecture.
+
+---
+
+# 🌐 TCP/IP Stack Architecture (4 Layers)
+
+| Layer | Responsibility | Examples |
+|-------|---------------|----------|
+| 4️⃣ Application | User-facing protocols | HTTP, HTTPS, FTP, SMTP, DNS |
+| 3️⃣ Transport | End-to-end communication | TCP, UDP |
+| 2️⃣ Internet | Logical addressing & routing | IP, ICMP |
+| 1️⃣ Network Access | Physical transmission | Ethernet, Wi-Fi |
+
+---
+
+## 🔍 Layer-by-Layer Explanation
+
+---
+
+### <span style="color:#2E86C1;">1️⃣ Application Layer</span>
+
+- Interface between user applications and network  
+- Handles protocols like:
+  - HTTP (Web)
+  - SMTP (Email)
+  - FTP (File Transfer)
+  - DNS (Domain resolution)
+
+---
+
+### <span style="color:#8E44AD;">2️⃣ Transport Layer</span>
+
+- Provides end-to-end communication  
+- Uses:
+  - TCP (Reliable)
+  - UDP (Fast & Lightweight)  
+
+Handles:
+- Port numbers  
+- Data segmentation  
+- Error control  
+
+---
+
+### <span style="color:#D35400;">3️⃣ Internet Layer</span>
+
+- Logical addressing (IP address)  
+- Packet routing  
+- Path determination  
+
+Responsible for:
+- IP protocol  
+- ICMP  
+- Routing decisions  
+
+---
+
+### <span style="color:#1ABC9C;">4️⃣ Network Access Layer</span>
+
+- Physical data transmission  
+- MAC addressing  
+- Hardware interaction  
+
+Examples:
+- Ethernet  
+- Wi-Fi  
+- Switches  
+
+---
+
+# 📌 What is the Main Mechanism for Creating an IP Address?
+
+IP addressing is based on structured schemes.
+
+---
+
+## 🔹 IPv4
+
+- 32-bit address  
+- Example: `192.168.1.10`  
+- Divided into:
+  - Network portion  
+  - Host portion  
+
+Allocation methods:
+- Static IP (Manual configuration)
+- Dynamic IP (DHCP server assigns automatically)
+
+---
+
+## 🔹 IPv6
+
+- 128-bit address  
+- Example: `2001:0db8:85a3::8a2e:0370:7334`  
+- Designed to solve IPv4 exhaustion  
+- Supports auto-configuration  
+
+---
+
+### 🧠 IP Address Allocation Mechanisms
+
+- DHCP (Dynamic Host Configuration Protocol)
+- Static assignment
+- APIPA (Automatic Private IP Addressing)
+- CIDR (Classless Inter-Domain Routing)
+
+---
+
+# ⚖ Difference Between TCP and UDP
+
+| Feature | TCP | UDP |
+|----------|------|------|
+| Connection Type | Connection-oriented | Connectionless |
+| Reliability | Reliable | Not guaranteed |
+| Ordering | Ordered delivery | No order guarantee |
+| Error Handling | Yes | Minimal |
+| Speed | Slower | Faster |
+| Use Cases | Web, Email, File Transfer | Streaming, VoIP, Gaming |
+
+---
+
+## 🔵 TCP (Transmission Control Protocol)
+
+- Establishes connection (3-way handshake)
+- Ensures:
+  - Reliability
+  - Acknowledgments
+  - Retransmission
+  - Flow control
+- Used where accuracy is critical
+
+Example:
+- Web browsing (HTTP/HTTPS)
+- Banking transactions
+- File transfers
+
+---
+
+## 🟠 UDP (User Datagram Protocol)
+
+- No handshake
+- No guaranteed delivery
+- Lightweight & faster
+- Lower overhead
+
+Used in:
+- Live streaming
+- VoIP calls
+- Online gaming
+- DNS queries
+
+---
+
+# 🔄 Real-World Trade-Off
+
+- TCP = Reliability over Speed  
+- UDP = Speed over Reliability  
+
+---
+
+# 🧠 Senior-Level Perspective
+
+> TCP/IP forms the backbone of modern networking.  
+> IP ensures unique device identification and routing.  
+> TCP and UDP reflect the fundamental trade-off between reliability and performance.
+
+In production environments, choosing between TCP and UDP depends on:
+- Business requirements  
+- Latency tolerance  
+- Data integrity needs  
+
+---
+
+# 🏁 Final Interview Summary
+
+> The TCP/IP stack defines how data moves across networks using a four-layer model. IP addressing uniquely identifies devices using IPv4 or IPv6 schemes, assigned statically or dynamically. TCP ensures reliable communication, while UDP prioritizes speed and efficiency — and selecting between them depends on application requirements.
+
+</details>
+
+---
 
