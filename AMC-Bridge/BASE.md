@@ -1,13 +1,4 @@
 # 🚀 DevOps Interview Handbook  
-### Senior DevOps Engineer (8+ Years Experience)
-
----
-
-<br>
-
-# 📘 DevOps & Agile Interview Q&A
-
----
 
 ## <span style="color:#2E86C1;">🎯 Q1. How do you explain what DevOps methodology or culture means?</span>
 
