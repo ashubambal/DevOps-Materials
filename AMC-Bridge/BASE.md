@@ -1,6 +1,6 @@
 # 🚀 DevOps Interview Handbook  
 
-## <span style="color:#2E86C1;">🎯 Q1. How do you explain what DevOps methodology or culture means?</span>
+### <span style="color:#2E86C1;">🎯 Q1. How do you explain what DevOps methodology or culture means?</span>
 
 <details>
 <summary><b>Click to Expand Answer</b></summary>
@@ -76,7 +76,7 @@ DevOps helps organizations:
 
 </details>
 
-## <span style="color:#8E44AD;">🎯 Q2. What agile or time-tracking tools do you know?</span>
+### <span style="color:#8E44AD;">🎯 Q2. What agile or time-tracking tools do you know?</span>
 
 <details>
 <summary><b>Click to Expand Answer</b></summary>
@@ -161,7 +161,7 @@ My approach:
 
 </details>
 
-## <span style="color:#1F618D;">🎯 Q3. How do you describe an application development life cycle, and how can DevOps be integrated here?</span>
+### <span style="color:#1F618D;">🎯 Q3. How do you describe an application development life cycle, and how can DevOps be integrated here?</span>
 
 <details>
 <summary><b>Click to Expand Answer</b></summary>
