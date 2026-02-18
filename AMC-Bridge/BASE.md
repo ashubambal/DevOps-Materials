@@ -176,10 +176,6 @@ My approach:
 
 ---
 
-<br>
-
----
-
 ## <span style="color:#1F618D;">🎯 Q3. How do you describe an application development life cycle, and how can DevOps be integrated here?</span>
 
 <details>
