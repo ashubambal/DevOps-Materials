@@ -310,5 +310,160 @@ DevOps integration results in:
 
 </details>
 
+
+### <span style="color:#154360;">🎯 Q4. Name OSI model levels and explain how data is transferred on each level.</span>
+
+<details>
+<summary><b>Click to Expand Answer</b></summary>
+
 ---
+
+### <span style="color:#27AE60;">✅ Senior-Level Answer</span>
+
+> The OSI (Open Systems Interconnection) model consists of seven layers. Each layer has a specific responsibility in data communication.  
+> When data is sent, it moves **down the layers** on the sender’s side (encapsulation), gets transmitted over the network, and then moves **up the layers** on the receiver’s side (decapsulation).
+
+---
+
+# 📚 The 7 OSI Layers (Top to Bottom)
+
+| Layer | Name | Primary Responsibility |
+|-------|------|------------------------|
+| 7️⃣ | Application | User-facing network services |
+| 6️⃣ | Presentation | Data formatting & encryption |
+| 5️⃣ | Session | Session management |
+| 4️⃣ | Transport | End-to-end communication |
+| 3️⃣ | Network | Routing & logical addressing |
+| 2️⃣ | Data Link | Framing & MAC addressing |
+| 1️⃣ | Physical | Transmission of raw bits |
+
+---
+
+# 🔍 Layer-by-Layer Explanation
+
+---
+
+## <span style="color:#2E86C1;">1️⃣ Physical Layer</span>
+
+- Deals with actual hardware transmission  
+- Converts data into electrical / optical / radio signals  
+- Handles cables, connectors, voltages  
+
+📌 Data Unit: **Bits**
+
+---
+
+## <span style="color:#8E44AD;">2️⃣ Data Link Layer</span>
+
+- Node-to-node delivery  
+- Frames bits into structured format  
+- Handles MAC addressing  
+- Performs error detection  
+
+📌 Data Unit: **Frame**
+
+---
+
+## <span style="color:#D35400;">3️⃣ Network Layer</span>
+
+- Logical addressing (IP address)  
+- Determines best path (routing)  
+- Packet forwarding across networks  
+
+📌 Data Unit: **Packet**
+
+---
+
+## <span style="color:#1ABC9C;">4️⃣ Transport Layer</span>
+
+- End-to-end communication  
+- Reliability (TCP)  
+- Fast transmission (UDP)  
+- Sequencing & error recovery  
+
+📌 Data Unit: **Segment**
+
+---
+
+## <span style="color:#C0392B;">5️⃣ Session Layer</span>
+
+- Establishes sessions between applications  
+- Maintains and terminates connections  
+- Handles session checkpoints  
+
+---
+
+## <span style="color:#7D3C98;">6️⃣ Presentation Layer</span>
+
+- Data translation & format conversion  
+- Encryption / Decryption  
+- Compression  
+
+Ensures application understands received data.
+
+---
+
+## <span style="color:#117A65;">7️⃣ Application Layer</span>
+
+- Closest to the user  
+- Provides services like:
+  - HTTP
+  - FTP
+  - SMTP
+  - DNS  
+
+Enables applications to communicate over the network.
+
+---
+
+# 🔄 How Data Moves (Encapsulation Process)
+
+### 📤 Sender Side
+
+Application Data
+↓
+Transport adds Header (Port, Sequence)
+↓
+Network adds IP Header
+↓
+Data Link adds MAC Header + Trailer
+↓
+Physical converts to Bits → Transmission
+
+
+Each layer adds its own header (and sometimes trailer).
+
+---
+
+# 🔁 Receiver Side (Decapsulation)
+
+The process is reversed:
+
+Bits → Frame → Packet → Segment → Application Data
+
+
+Each layer removes its respective header and passes data upward.
+
+---
+
+# 🧠 Why OSI Model is Important (Senior Perspective)
+
+- Simplifies troubleshooting  
+- Standardizes communication  
+- Enables interoperability  
+- Helps isolate network issues  
+
+Example:
+- Cannot ping? → Check Network Layer  
+- Packet loss? → Check Transport Layer  
+- No cable signal? → Check Physical Layer  
+
+---
+
+# 🏁 Final Interview Summary
+
+> The OSI model provides a structured framework for understanding how data travels from one system to another. Data is encapsulated as it moves down the layers on the sender’s side and decapsulated as it moves up on the receiver’s side. This layered approach simplifies troubleshooting and ensures standardized communication across different systems.
+
+</details>
+
 
