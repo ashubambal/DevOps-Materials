@@ -450,7 +450,7 @@ In production, we usually:
 
 ---
 
-### 🖥️ Q4: What System Diagnosis Tools Can You Name? What Does "Load Average" Mean in `top`?
+### 🐧 Q4: What System Diagnosis Tools Can You Name? What Does "Load Average" Mean in `top`?
 
 <details>
 <summary><b>Click to Expand Answer</b></summary>
