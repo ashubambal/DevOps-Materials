@@ -281,9 +281,9 @@ lsblk
 You should see something like:
 
 ```
-xvda    8G   (root)
-xvdb   12G
-xvdc   20G
+xvda      8G   (root)
+nvme1n1   12G
+nvme2n1   20G
 ```
 
 If device name differs (like `/dev/nvme1n1`), that’s normal in newer instances.
@@ -297,13 +297,13 @@ If device name differs (like `/dev/nvme1n1`), that’s normal in newer instances
 Example for 12GB volume:
 
 ```bash
-sudo mkfs -t ext4 /dev/xvdb
+sudo mkfs -t ext4 /dev/nvme1n1
 ```
 
 For 20GB volume:
 
 ```bash
-sudo mkfs -t ext4 /dev/xvdc
+sudo mkfs -t ext4 /dev/nvme2n1
 ```
 
 ---
@@ -320,8 +320,8 @@ sudo mkdir /data20
 ## ✅ Step 4: Mount the Volumes
 
 ```bash
-sudo mount /dev/xvdb /data12
-sudo mount /dev/xvdc /data20
+sudo mount /dev/nvme1n1 /data12
+sudo mount /dev/nvme2n1 /data20
 ```
 
 Now check:
@@ -345,8 +345,8 @@ sudo vi /etc/fstab
 Add:
 
 ```
-/dev/xvdb  /data12  ext4  defaults,nofail  0  2
-/dev/xvdc  /data20  ext4  defaults,nofail  0  2
+/dev/nvme1n1  /data12  ext4  defaults,nofail  0  2
+/dev/nvme2n1  /data20  ext4  defaults,nofail  0  2
 ```
 
 Test:
@@ -410,7 +410,7 @@ Now Docker uses the 12GB volume.
 Example:
 
 ```bash
-sudo mount /dev/xvdb /var/lib/docker
+sudo mount /dev/nvme1n1 /var/lib/docker
 ```
 
 This directly makes Docker use that disk.
