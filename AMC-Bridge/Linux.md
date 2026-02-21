@@ -94,9 +94,8 @@ Hidden files are commonly checked when:
 
 ---
 
----
 
-## 🐧 Q2: `df -h` Shows Free Space, But You Still Get "No Space Left on Device" — Why?
+### 🐧 Q2: `df -h` Shows Free Space, But You Still Get "No Space Left on Device" — Why?
 
 <details>
 <summary><b>Click to Expand Answer</b></summary>
