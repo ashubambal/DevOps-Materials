@@ -2,7 +2,10 @@
 
 ---
 
-## <span style="color:#2E86C1;">Q1: How can you show hidden files on Linux® systems?</span>
+### <span style="color:#2E86C1;">Q1: How can you show hidden files on Linux® systems?</span>
+
+<details>
+<summary><b>Click to Expand Answer</b></summary>
 
 ### ✅ Answer:
 
@@ -12,6 +15,8 @@ To display hidden files, we use the `-a` option with the `ls` command:
 
 ```bash
 ls -a
+
+```
 
 🔍 Explanation:
 
@@ -37,6 +42,7 @@ You can combine -l (long listing) with -a:
 
 ```bash
 ls -la
+```
 
 -l → Long listing format
 
@@ -62,9 +68,12 @@ Common hidden files and directories:
 .ssh/
 .git/
 .env
+```
 
 📁 View Hidden Files in a Specific Directory
 
 To check hidden files inside a particular directory:
 
 ```bash
+ls -la /etc/
+```
