@@ -674,3 +674,219 @@ This shows real-world experience.
 </details>
 
 ---
+
+### 💽 Q5: What If a Disk Is Corrupted or Failed? How Do You Retrieve Data?
+
+<details>
+<summary><b>Click to Expand Answer</b></summary>
+
+---
+
+# 🎯 Overview
+
+When a disk becomes corrupted or fails, recovery depends on the type of failure:
+
+| Failure Type | Description |
+|--------------|------------|
+| 🧠 Logical Failure | Filesystem corruption, deleted files, partition damage |
+| 💿 Hardware Failure | Bad sectors, disk I/O errors |
+| 🔧 Severe Physical Damage | Motor failure, head crash, PCB damage |
+
+Correctly identifying the failure type is critical before taking action.
+
+---
+
+# 🧠 1️⃣ Logical Corruption (Filesystem Issues)
+
+### Examples:
+- Accidental file deletion  
+- Corrupted filesystem metadata  
+- Lost partitions  
+
+---
+
+## 🚨 First Rule
+
+> Always mount the disk as **read-only** to prevent further damage.
+
+```bash
+mount -o ro /dev/sdb1 /mnt/recovery
+```
+
+---
+
+## 🔧 Recovery Tools
+
+| Tool | Purpose |
+|------|----------|
+| `fsck` | Repair filesystem inconsistencies |
+| `testdisk` | Recover lost partitions & boot sectors |
+| `photorec` | Recover deleted files at block level |
+
+---
+
+## 🛠 Example Scenario
+
+Problem:
+`/var` partition corrupted after improper shutdown.
+
+Steps:
+1. Unmount the partition
+2. Run:
+
+```bash
+fsck -y /dev/sdb1
+```
+
+If recovery fails:
+
+```bash
+testdisk
+```
+
+For deleted file recovery:
+
+```bash
+photorec
+```
+
+---
+
+# 💿 2️⃣ Hardware Failure (Bad Sectors / Failing Drive)
+
+Symptoms:
+- I/O errors in logs  
+- Slow disk performance  
+- System freezing  
+
+---
+
+## 🔍 Check Disk Health
+
+```bash
+smartctl -a /dev/sdb
+```
+
+Look for:
+- Reallocated sector count
+- Pending sectors
+- SMART failure warnings
+
+---
+
+## 🚨 Critical Step
+
+> Never work directly on a failing disk.
+
+Always clone it first.
+
+---
+
+## 🧰 Use `ddrescue` to Clone
+
+```bash
+ddrescue /dev/sdb /dev/sdc rescue.log
+```
+
+- Clones disk
+- Skips bad sectors
+- Retries later
+
+After cloning:
+- Perform recovery on the cloned disk
+- Run `fsck`, `testdisk` on the copy
+
+---
+
+## 🛠 Production Example
+
+Disk showing repeated I/O errors.
+
+Steps taken:
+1. Checked SMART status
+2. Cloned using `ddrescue`
+3. Recovered files from cloned image
+4. Replaced failing disk
+
+Zero additional data loss.
+
+---
+
+# 🔧 3️⃣ Severe Physical Failure
+
+Symptoms:
+- Clicking noise
+- Disk not detected
+- Burnt PCB smell
+- Motor failure
+
+At this stage:
+
+> ❌ Software tools will NOT work.
+
+Only solution:
+- Send disk to professional recovery lab
+- Clean-room facility required
+
+Used in:
+- Banking
+- Healthcare
+- Critical compliance environments
+
+---
+
+# 🔥 Senior-Level Best Practices
+
+## ✅ Always Image First
+Never attempt repair before creating a disk image.
+
+## ✅ Identify Failure Type
+Logical vs Physical — shows troubleshooting maturity.
+
+## ✅ Prevention Is Better Than Recovery
+
+In production environments:
+
+- Use RAID
+- Enable automatic backups
+- Monitor SMART alerts
+- Monitor I/O errors in logs
+- Implement snapshot strategies (EBS snapshots in AWS)
+
+---
+
+# 📊 Real Production Architecture Prevention
+
+Example setup:
+
+- RAID 1 for redundancy
+- Daily backups
+- Weekly offsite backup
+- SMART monitoring alerts
+- Cloud snapshot automation
+
+This prevents catastrophic loss.
+
+---
+
+# 🎤 Concise Interview Delivery
+
+> "If a disk is corrupted, I first determine whether the issue is logical or physical. For logical issues, I mount it read-only and use tools like fsck, testdisk, or photorec. For hardware failure, I clone the disk using ddrescue and recover data from the copy. For severe physical damage, professional recovery services are required. The key principle is to always image the disk first before attempting recovery."
+
+---
+
+# 💡 Interview Tip
+
+To impress senior panels:
+- Mention SMART monitoring
+- Mention ddrescue
+- Mention RAID & backups
+- Emphasize prevention strategy
+
+This demonstrates production-level experience.
+
+---
+
+</details>
+
+---
