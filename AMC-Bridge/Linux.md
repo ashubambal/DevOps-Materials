@@ -230,7 +230,7 @@ fsck /dev/xvda1
 
 ---
 
-## ☁️ Q3: Attached New EBS Volumes to EC2 But Not Showing in `df -h` — How to Use Them?
+### 🐧 Q3: Attached New EBS Volumes to EC2 But Not Showing in `df -h` — How to Use Them?
 
 You have:
 
