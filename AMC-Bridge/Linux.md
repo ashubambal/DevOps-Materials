@@ -92,8 +92,9 @@ Hidden files are commonly checked when:
 
 > "In Linux, hidden files start with a dot. We use `ls -a` to display hidden files and `ls -la` to view detailed information such as permissions, ownership, and timestamps. Hidden files are commonly used for configuration in DevOps environments."
 
----
+</details>
 
+---
 
 ### 🐧 Q2: `df -h` Shows Free Space, But You Still Get "No Space Left on Device" — Why?
 
