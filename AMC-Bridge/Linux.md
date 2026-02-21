@@ -449,3 +449,228 @@ In production, we usually:
 </details>
 
 ---
+
+### 🖥️ Q4: What System Diagnosis Tools Can You Name? What Does "Load Average" Mean in `top`?
+
+<details>
+<summary><b>Click to Expand Answer</b></summary>
+
+---
+
+# 🛠️ System Diagnosis Tools (Linux)
+
+In production environments, system diagnosis tools help identify:
+
+- CPU bottlenecks  
+- Memory leaks  
+- Disk I/O issues  
+- Network congestion  
+- Stuck or zombie processes  
+
+---
+
+## 📊 Commonly Used Tools
+
+| Tool | Purpose | Production Use Case |
+|------|----------|--------------------|
+| `top` / `htop` | Real-time CPU, memory, load average, process monitoring | Identify high CPU-consuming process |
+| `vmstat` | Memory, swap, CPU, I/O statistics | Detect memory pressure or swapping |
+| `iostat` | Disk I/O monitoring | Diagnose disk latency issues |
+| `sar` | Historical performance data | Analyze past CPU spikes |
+| `netstat` / `ss` | Network connections & ports | Detect suspicious connections |
+| `dstat` | Combined CPU, disk, network stats | Quick system health overview |
+| `strace` | System call tracing | Debug stuck process |
+| `lsof` | List open files | Identify file locks |
+| `free` | Memory usage | Check RAM availability |
+| `uptime` | Uptime & load average | Quick health snapshot |
+
+---
+
+# 🔥 Production Scenarios (Real Examples)
+
+---
+
+## 🚨 Scenario 1: High CPU Usage
+
+Problem:
+Application is slow.
+
+Command Used:
+```bash
+top
+```
+
+What You Check:
+- `%CPU`
+- Load average
+- Which process is consuming CPU
+
+Example:
+Java process consuming 350% CPU on 4-core machine → CPU bottleneck identified.
+
+---
+
+## 💾 Scenario 2: Application Crashing Due to Memory
+
+Command Used:
+```bash
+free -m
+vmstat 1
+```
+
+What You Check:
+- Available memory
+- Swap usage
+- si/so (swap in/out)
+
+If swap usage is high → Memory leak suspected.
+
+---
+
+## 💿 Scenario 3: Disk I/O Bottleneck
+
+Command Used:
+```bash
+iostat -x 1
+```
+
+What You Check:
+- %util near 100%
+- High await time
+
+If disk utilization is constantly 100% → storage bottleneck.
+
+---
+
+## 🌐 Scenario 4: Suspicious Network Traffic
+
+Command Used:
+```bash
+ss -tulnp
+```
+
+What You Check:
+- Open ports
+- Unexpected established connections
+
+Used during security investigation.
+
+---
+
+## 🧵 Scenario 5: Process Hanging
+
+Command Used:
+```bash
+strace -p <PID>
+```
+
+Used to trace system calls and identify where process is stuck.
+
+---
+
+# 📈 What Is Load Average in `top`?
+
+When you run:
+
+```bash
+top
+```
+
+You will see:
+
+```
+load average: 0.75, 1.20, 0.90
+```
+
+---
+
+## 📌 Definition
+
+Load average represents:
+
+> The average number of processes that are either:
+> - Running on CPU  
+> - Waiting for CPU  
+
+---
+
+## ⏱️ The Three Numbers Represent
+
+| Value | Meaning |
+|--------|---------|
+| 1st | Last 1 minute average |
+| 2nd | Last 5 minutes average |
+| 3rd | Last 15 minutes average |
+
+---
+
+## 🧠 How to Interpret Load Average
+
+Compare load average with number of CPU cores.
+
+### ✅ Healthy System
+
+If:
+
+```
+Load Average ≤ Number of CPU cores
+```
+
+System is stable.
+
+Example:
+- 4-core CPU
+- Load average: 2.0  
+→ System is comfortable.
+
+---
+
+### ❌ Overloaded System
+
+If:
+
+```
+Load Average > Number of CPU cores
+```
+
+Processes are waiting in run queue.
+
+Example:
+- 4-core CPU
+- Load average: 10.0  
+→ Heavy overload, performance degradation.
+
+---
+
+# 🔥 Real Production Example
+
+In one production case:
+
+- Load average suddenly increased to 15.0 on 4-core server
+- `top` showed high `%wa` (I/O wait)
+- `iostat` confirmed disk utilization was 100%
+- Root cause: Log file flooding disk
+- Solution: Clean logs + optimize log rotation
+
+---
+
+# 🎤 Concise Interview Delivery
+
+> "For system diagnosis, I use tools like top, htop, vmstat, iostat, sar, and ss depending on the issue. In top, load average shows the average number of processes running or waiting for CPU over 1, 5, and 15 minutes. If load average exceeds the number of CPU cores, it indicates system overload."
+
+---
+
+# 💡 Interview Tip
+
+Always:
+- Mention real production scenario
+- Compare load average with CPU cores
+- Explain both CPU-bound and I/O-bound cases
+
+This shows real-world experience.
+
+---
+
+</details>
+
+---
