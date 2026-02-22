@@ -342,7 +342,7 @@ C:\inetpub\wwwroot\MyApp
 
 </details>
 
-### 🚀 Q3: How can you deploy a site on the Windows Server® operating system without an agent?
+### Q3: How can you deploy a site on the Windows Server® operating system without an agent?
 
 <details>
 <summary><b>Click to Expand Answer</b></summary>
