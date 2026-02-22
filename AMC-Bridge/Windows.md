@@ -925,3 +925,138 @@ Layer 3 → Centralized logging & analytics (Long-term insights)
 Effective Windows monitoring combines all three layers.
 
 </details>
+
+### Q6: Name a native method to use Linux packages inside the Windows environment.
+
+<details>
+<summary><b>Click to Expand Answer</b></summary>
+
+## 📌 Direct Answer
+
+The native method to use Linux packages inside Windows is **Windows Subsystem for Linux (WSL)**.
+
+WSL allows you to run a full Linux distribution directly on Windows without requiring a traditional virtual machine or dual-boot setup.
+
+---
+
+# 🐧 Windows Subsystem for Linux (WSL)
+
+---
+
+## 🔹 What is WSL?
+
+```diff
++ Native Windows feature
++ Runs Linux distributions directly on Windows
++ No full VM or dual boot required
++ Supports native Linux package managers
+```
+
+WSL enables installation of Linux distributions such as:
+
+- Ubuntu  
+- Debian  
+- CentOS  
+- openSUSE  
+
+---
+
+# 📦 Using Linux Package Managers in Windows
+
+Once WSL is installed, you can use standard Linux package managers:
+
+| Distribution | Package Manager |
+|--------------|-----------------|
+| Ubuntu / Debian | apt |
+| CentOS / RHEL | yum / dnf |
+| openSUSE | zypper |
+
+---
+
+## 🛠️ Example
+
+```bash
+sudo apt update
+sudo apt install nginx
+```
+
+✔ This installs **Nginx** inside the WSL Ubuntu environment  
+✔ Runs seamlessly within Windows  
+✔ No external VM required  
+
+---
+
+# 🚀 WSL2 Enhancements
+
+WSL2 improves performance and compatibility by using:
+
+```diff
++ Lightweight virtual machine
++ Real Linux kernel
++ Better system call compatibility
++ Improved filesystem performance
+```
+
+---
+
+## 🔹 Additional Capabilities
+
+- Supports Docker and container workloads
+- Access Linux files from Windows:
+  
+  ```
+  \\wsl$
+  ```
+
+- Access Windows files from Linux:
+
+  ```
+  /mnt/c/
+  ```
+
+```diff
++ Ideal for DevOps workflows
++ Useful for cross-platform development
++ Simplifies containerization tasks
+```
+
+---
+
+# 📊 Why WSL is Important for DevOps
+
+```diff
++ Run Linux tools on Windows
++ Test scripts locally before production deployment
++ Use Bash, SSH, Git, Kubernetes CLI
++ Develop cloud-native applications easily
+```
+
+WSL bridges the gap between Windows and Linux environments.
+
+---
+
+# 🎤 Interview-Ready Summary
+
+> “The native method to use Linux packages inside Windows is Windows Subsystem for Linux (WSL). With WSL or WSL2, I can install a Linux distribution and use package managers like apt or yum directly, without needing third-party tools or agents. WSL2 uses a lightweight VM with a real Linux kernel, which provides better performance and compatibility. It’s especially useful in DevOps, cross-platform development, and containerized environments.”
+
+---
+
+# ✅ Best Practices
+
+```diff
++ Use WSL2 for better compatibility
++ Keep distributions updated
++ Use separate distro for testing
++ Integrate with Docker Desktop if needed
++ Backup important WSL environments
+```
+
+---
+
+# 🏁 Final Takeaway
+
+✔ WSL = Native Linux inside Windows  
+✔ WSL2 = Improved performance & real Linux kernel  
+✔ Essential for DevOps & cross-platform development  
+
+</details>
