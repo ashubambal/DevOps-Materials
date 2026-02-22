@@ -447,10 +447,6 @@ C:\inetpub\wwwroot\MyApp
 
 ---
 
-</details>
-
----
-
 # 📊 Comparison Table
 
 | Method | Agent Required | Automation | Security | Recommended |
@@ -477,8 +473,6 @@ C:\inetpub\wwwroot\MyApp
 + Enable logging and monitoring
 + Document rollback steps
 ```
-
----
 
 # 🏁 Final Note
 
