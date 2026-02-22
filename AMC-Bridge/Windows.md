@@ -344,7 +344,8 @@ C:\inetpub\wwwroot\MyApp
 
 ### 🚀 Q3: How can you deploy a site on the Windows Server® operating system without an agent?
 
----
+<details>
+<summary><b>Click to Expand Answer</b></summary>
 
 ## 📌 Answer Overview
 
@@ -353,15 +354,6 @@ Deploying a site on **Windows Server** without using an agent means avoiding the
 - Web Deploy Handler (Agentless)
 - Offline Package Deployment
 - Manual File Copy Deployment
-
----
-
-# 🔽 Expand to View Detailed Answer
-
-<details>
-<summary><strong>📦 Deployment Without Agent (Agentless Approach)</strong></summary>
-
----
 
 ## 1️⃣ Using Web Deploy Handler (Recommended Agentless Method)
 
