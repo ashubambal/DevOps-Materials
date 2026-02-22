@@ -134,7 +134,7 @@ These usually serve static files like:
 > The pool ensures stability, the site provides structure, and directories organize content.
 
 </details>
----
+
 
 ### Q2 What should you do to deploy a .NET application in IIS?  What steps do you take?
 
