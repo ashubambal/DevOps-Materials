@@ -7,7 +7,6 @@
 <details>
 <summary><b>Click to Expand Answer</b></summary>
 
----
 
 ## 🔹 1️⃣ Application
 
