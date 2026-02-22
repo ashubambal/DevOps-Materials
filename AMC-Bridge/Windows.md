@@ -2,7 +2,7 @@
 
 ---
 
-### ❓ What is the difference between an Application, Application Pool, Website, and Web Directory in IIS?
+### Q1 What is the difference between an Application, Application Pool, Website, and Web Directory in IIS?
 
 <details>
 <summary><b>Click to Expand Answer</b></summary>
@@ -134,9 +134,10 @@ These usually serve static files like:
 >
 > The pool ensures stability, the site provides structure, and directories organize content.
 
+</details>
 ---
 
-### ❓ What should you do to deploy a .NET application in IIS?  What steps do you take?
+### Q2 What should you do to deploy a .NET application in IIS?  What steps do you take?
 
 <details>
 <summary><b>Click to Expand Answer</b></summary>
@@ -339,4 +340,4 @@ C:\inetpub\wwwroot\MyApp
 | Cross-platform | ❌ Windows Only | ✅ Cross-platform |
 | Config File | web.config | appsettings.json |
 
-
+</details>
