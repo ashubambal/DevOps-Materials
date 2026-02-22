@@ -689,3 +689,239 @@ choco upgrade all -y
 ---
 
 </details>
+
+### Q5: What monitoring tools for the Windows® operating system do you know?
+
+<details>
+<summary><b>Click to Expand Answer</b></summary>
+
+## 📌 Direct Answer
+
+I’m familiar with both **built-in Windows monitoring tools** and **enterprise-grade monitoring solutions**.  
+My approach is layered — starting with native tools for quick diagnostics and using enterprise platforms for proactive monitoring, alerting, and trend analysis.
+
+---
+
+# 🖥️ 1️⃣ Built-in Windows Monitoring Tools
+
+---
+
+## 🔹 Performance Monitor (PerfMon)
+
+```diff
++ Tracks CPU, Memory, Disk, Network counters
++ Helps establish performance baselines
++ Identifies bottlenecks
+```
+
+Used for:
+- Monitoring system performance counters
+- Detecting resource saturation
+- Troubleshooting performance degradation
+
+---
+
+## 🔹 Event Viewer
+
+```diff
++ Centralized log management (System, Application, Security)
++ Critical for root cause analysis
++ Tracks service failures & security events
+```
+
+Used for:
+- Investigating crashes
+- Reviewing authentication failures
+- Debugging application errors
+
+---
+
+## 🔹 Task Manager / Resource Monitor
+
+```diff
++ Real-time process monitoring
++ Quick performance diagnostics
++ Identifies high CPU/memory processes
+```
+
+Useful for:
+- Immediate troubleshooting
+- Checking process-level resource usage
+- Monitoring spikes
+
+---
+
+## 🔹 Windows Admin Center
+
+```diff
++ Web-based management tool
++ Integrated performance dashboards
++ Remote server monitoring
+```
+
+Ideal for:
+- Centralized Windows Server management
+- Managing multiple servers
+- Viewing real-time performance data
+
+---
+
+## 🔹 PowerShell Monitoring Cmdlets
+
+Examples:
+
+```powershell
+Get-Process
+Get-EventLog
+Get-Service
+Get-Counter
+```
+
+```diff
++ Enables automation
++ Script-based health checks
++ Supports scheduled monitoring
+```
+
+---
+
+# 🏢 2️⃣ Enterprise Monitoring Solutions
+
+---
+
+## 🔹 System Center Operations Manager (SCOM)
+
+```diff
++ Microsoft enterprise monitoring solution
++ Deep Windows integration
++ Application & infrastructure monitoring
+```
+
+Used for:
+- Monitoring Windows servers
+- Tracking service health
+- Enterprise alerting
+
+---
+
+## 🔹 SolarWinds Server & Application Monitor
+
+```diff
++ Detailed performance visibility
++ Service & process monitoring
++ Advanced alerting
+```
+
+---
+
+## 🔹 ManageEngine OpManager
+
+```diff
++ Network + Server monitoring
++ Windows-specific monitoring support
++ Alert and reporting features
+```
+
+---
+
+## 🔹 Nagios / Zabbix (Open Source)
+
+```diff
++ Cross-platform monitoring
++ Plugin-based architecture
++ Custom alerting rules
+```
+
+Used in hybrid Linux + Windows environments.
+
+---
+
+## 🔹 Datadog / New Relic (Cloud Monitoring)
+
+```diff
++ Agent-based monitoring
++ Metrics + Logs + APM
++ Cloud-native integration
+```
+
+Useful for:
+- Hybrid infrastructure
+- Application performance monitoring
+- Real-time alerting dashboards
+
+---
+
+# 📊 3️⃣ Log Management & Alerting Platforms
+
+---
+
+## 🔹 ELK Stack (Elasticsearch, Logstash, Kibana)
+
+```diff
++ Centralized log collection
++ Powerful search & visualization
++ Custom dashboards
+```
+
+---
+
+## 🔹 Splunk
+
+```diff
++ Enterprise log analytics
++ Strong Windows integration
++ Advanced correlation & alerting
+```
+
+---
+
+## 🔹 Prometheus + Grafana
+
+```diff
++ Metrics-based monitoring
++ Visualization dashboards
++ Hybrid infrastructure support
+```
+
+Common in environments mixing Windows + Kubernetes/Linux workloads.
+
+---
+
+# 📈 Monitoring Strategy (Best Practice)
+
+```diff
+Layer 1 → Native Windows tools (Immediate troubleshooting)
+Layer 2 → Enterprise monitoring tools (Proactive alerting)
+Layer 3 → Centralized logging & analytics (Long-term insights)
+```
+
+---
+
+# 🎤 Interview-Ready Summary
+
+> “On Windows systems, I use built-in tools like Performance Monitor, Event Viewer, and Resource Monitor for quick diagnostics and root cause analysis. In enterprise environments, I’ve worked with SCOM, SolarWinds, and Datadog to monitor server health, services, and performance metrics. I also integrate centralized logging platforms like ELK or Splunk for better visibility and alerting. My approach is layered: start with native tools for immediate troubleshooting, then rely on enterprise monitoring solutions for proactive alerting and long-term performance analysis.”
+
+---
+
+# ✅ Best Practices
+
+```diff
++ Establish performance baselines
++ Configure proactive alerts
++ Centralize logs
++ Monitor critical services
++ Track capacity trends
++ Automate health checks using PowerShell
+```
+
+---
+
+# 🏁 Final Takeaway
+
+✔ Native Tools = Immediate Diagnostics  
+✔ Enterprise Tools = Proactive Monitoring  
+✔ Log Platforms = Centralized Visibility  
+
+Effective Windows monitoring combines all three layers.
+
+</details>
